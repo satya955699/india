@@ -1,0 +1,239 @@
+<%- include("header.ejs") %>
+<body class=" grid bg-yellow-50 ">
+   
+    <nav class=" w-full  text-[#4B3832] "style="background-color: #FF9933; font-family: 'Poppins', sans-serif;color: #FFD700";>
+      
+            <div class="logo text-white text-6xl w-full justify-center">
+                <a class="place-content-center flex  justify-center w-full font-bold tracking-wider main " href="#">cultural india</a>
+            </div>
+    </nav>
+    <div class="bg-red-500  " >
+        <ul class="nav-links justify-evenly text-2xl font-bold md:flex grid grid-cols-1 text-center   text-[#4B3832]">
+            <div>
+
+                <li><a class=" absolute" href="#home">Home</a></li>
+            </div>
+            <li class="home"><a href="/tradition">Traditions</a></li>
+            <li class="home"><a href="festivals">Festivals</a></li>
+            <li class="home"><a href="/art-craft">Art & Craft</a></li>
+            <li class="home"><a href="/music">Music & Dance</a></li>   
+            <li class="home"><a href="#about">About Us</a></li>
+        </ul>
+    </div>
+
+    <!-- images slide  -->
+    <div id="carouselExampleInterval" class="carousel overflow-hidden main w-[100vw]  image " data-bs-ride="carousel" >
+      
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <img  src="taj.jpg" class="d-block w-100 h-[86vh]" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Taj Mahal</h5>
+                <p>Some representative placeholder content for the first slide.</p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="odisi.jpg" class="d-block w-100 h-[86vh]" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>First slide label</h5>
+                <p>Some representative placeholder content for the first slide.</p>
+              </div>
+            </div>
+        
+          <div class="carousel-item">
+            <img src="kila.jpg" class="h-[86vh] d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>First slide label</h5>
+                <p>Some representative placeholder content for the first slide.</p>
+              </div>
+            </div>
+         
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <section class=" one md:flex mt-8 h-[90vh]   w-full justify-evenly " >
+        <div class=" h-[50vh] w-[40vw] "   >
+        
+            <h1 class="text-center text-blue-900 font-serif"> DO YOU KNOW </h1>
+            <hr>
+            <p class=" text-2xl">India's history spans over 5,000 years, beginning with the Indus Valley Civilization. Ancient India was home to powerful empires like the Maurya and Gupta, which saw advancements in science, art, and philosophy. The region witnessed invasions by Persians, Greeks, and Central Asians, leading to diverse cultural influences. The Mughal Empire, established in the 16th century, marked a period of prosperity. British colonization in the 18th century led to significant socio-economic changes. India gained independence in 1947 after a nonviolent struggle led by Mahatma Gandhi, emerging as a democratic nation with a rich cultural heritage.</p>
+
+
+        </div>
+        <div class="  w-[40vw]">
+          <h1 class="text-blue-900 text-center"> DID YOU KNOW</h1>
+          <hr>
+
+          <div  class=" ">
+            <div class="flex">
+             
+              <h1>GANESH PUJA 7 SEPS</h1>
+            </div>
+            <p class="text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error architecto minus tempora est officia excepturi eum pariatur necessitatibus, voluptas totam debitis aliquid aperiam? Sint facere, impedit voluptatem nobis quod veritatis? Ullam modi accusantium, tempora autem odio provident nobis libero eum. Pariatur modi eos odio blanditiis, magnam optio repellat tempora facilis!</p>
+            
+          </div>
+          helo
+
+        </div>
+      </section>
+      
+
+
+    <div class="map-container place-content-center hidden md:flex " >
+        <div class=" ">
+             <h1 class="grid place-content-center">click any state to know details</h1>
+            <object  data="india-map.svg" type="image/svg+xml" id="india-map"> </object>
+        </div>
+         
+    </div>
+    <div class="mt-10">
+      <h1 class="place-content-center grid font-bold text-blue-900 ">STORIES</h1>
+      <hr>
+    
+     
+
+      </div>
+      <!-- chat Gupta -->
+      <div class=" w-[100vw] px-8  py-8">
+     
+
+        <div class="relative">
+            <!-- Left Arrow -->
+            <button id="prev" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full">
+                &larr;
+            </button>
+
+            <!-- Story Slider -->
+            <div id="slider" class="flex overflow-x-hidden scroll-smooth">
+                <div class="min-w-[500px] max-w-[700px] p-4">
+                    <img src="odisi.jpg" alt="Story 1" class="rounded-lg shadow-lg">
+                    <h3 class="text-lg font-semibold mt-4">Lord Padmanabha and His D...</h3>
+                </div>
+                <div class="min-w-[500px] max-w-[700px] p-4">
+                    <img src="odisi.jpg" alt="Story 2" class="rounded-lg shadow-lg">
+                    <h3 class="text-lg font-semibold mt-4">The Jagannath Temple - Puri</h3>
+                </div>
+                <div class="min-w-[500px] max-w-[700px] p-4">
+                    <img src="https://via.placeholder.com/300x200" alt="Story 3" class="rounded-lg shadow-lg">
+                    <h3 class="text-lg font-semibold mt-4">Delhi Durbars</h3>
+                </div>
+                <div class="min-w-[500px] max-w-[700px] p-4">
+                    <img src="https://via.placeholder.com/300x200" alt="Story 4" class="rounded-lg shadow-lg">
+                    <h3 class="text-lg font-semibold mt-4">Simla: The Summer Capital</h3>
+                </div>
+                <div class="min-w-[500px] max-w-[700px] p-4">
+                  <img src="https://via.placeholder.com/300x200" alt="Story 4" class="rounded-lg shadow-lg">
+                  <h3 class="text-lg font-semibold mt-4">Simla: The Summer Capital</h3>
+              </div>
+              <div class="min-w-[500px] max-w-[700px] p-4">
+                <img src="https://via.placeholder.com/300x200" alt="Story 4" class="rounded-lg shadow-lg">
+                <h3 class="text-lg font-semibold mt-4">Simla: The Summer Capital</h3>
+            </div>
+            </div>
+
+            <!-- Right Arrow -->
+            <button id="next" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full">
+                &rarr;
+            </button>
+        </div>  
+    </div> 
+    <!-- footer  -->
+    <footer class="bg-gray-900 text-white py-10">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex flex-wrap justify-between">
+              <!-- About Section -->
+              <div class="w-full sm:w-1/2 lg:w-1/3 mb-6 lg:mb-0">
+                  <h3 class="text-lg font-bold mb-4">About Indian Culture</h3>
+                  <p class="text-gray-400">
+                      Explore the rich cultural heritage of India, from ancient temples to traditional arts, and immerse yourself in the stories and traditions that have shaped our nation.
+                  </p>
+              </div>
+  
+              <!-- Quick Links -->
+              <div class="w-full sm:w-1/2 lg:w-1/3 mb-6 lg:mb-0">
+                  <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                  <ul>
+                      <li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
+                      <li><a href="#" class="text-gray-400 hover:text-white">Stories</a></li>
+                      <li><a href="#" class="text-gray-400 hover:text-white">Festivals</a></li>
+                      <li><a href="#" class="text-gray-400 hover:text-white">Art & Craft</a></li>
+                      <li><a href="#" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                  </ul>
+              </div>
+  
+              <!-- Contact Info -->
+              <div class="w-full sm:w-1/2 lg:w-1/3">
+                  <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+                  <p class="text-gray-400">
+                      Indian Culture & Heritage
+                  </p>
+                  <p class="text-gray-400">
+                      Email: info@indianculture.com
+                  </p>
+                  <p class="text-gray-400">
+                      Phone: +91 12345 67890
+                  </p>
+              </div>
+          </div>
+          <!-- Social Media Icons -->
+          <div class="flex justify-center mt-8">
+              <a href="#" class="text-gray-400 hover:text-white mx-4">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M24 4.557a9.88 9.88 0 01-2.828.775 4.93 4.93 0 002.165-2.724 9.872 9.872 0 01-3.127 1.195 4.917 4.917 0 00-8.384 4.482A13.944 13.944 0 011.671 3.149a4.916 4.916 0 001.523 6.573 4.897 4.897 0 01-2.229-.616v.061a4.914 4.914 0 003.946 4.814 4.9 4.9 0 01-2.224.084 4.918 4.918 0 004.588 3.417 9.867 9.867 0 01-6.11 2.105c-.397 0-.79-.023-1.175-.069a13.905 13.905 0 007.557 2.212c9.057 0 14.004-7.503 14.004-14.004 0-.213-.005-.426-.015-.637A10.025 10.025 0 0024 4.557z"/>
+                  </svg>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white mx-4">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M23.954 4.569c-.885.392-1.833.656-2.828.775a4.935 4.935 0 002.163-2.723 9.864 9.864 0 01-3.127 1.194 4.917 4.917 0 00-8.384 4.482 13.934 13.934 0 01-10.11-5.134 4.916 4.916 0 001.523 6.573A4.897 4.897 0 01.92 8.952v.062a4.913 4.913 0 003.946 4.814 4.902 4.902 0 01-2.224.085 4.917 4.917 0 004.588 3.417 9.863 9.863 0 01-6.1 2.106c-.397 0-.79-.023-1.175-.069a13.905 13.905 0 007.557 2.212c9.057 0 14.004-7.503 14.004-14.004 0-.213-.005-.426-.015-.637A9.986 9.986 0 0024 4.557z"/>
+                  </svg>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white mx-4">
+                  <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M24 2.557a9.9 9.9 0 01-2.828.775 4.94 4.94 0 002.165-2.724 9.867 9.867 0 01-3.127 1.194 4.917 4.917 0 00-8.384 4.482 13.936 13.936 0 01-10.11-5.134 4.915 4.915 0 001.523 6.573A4.895 4.895 0 01.92 8.952v.062a4.914 4.914 0 003.946 4.814 4.902 4.902 0 01-2.224.085 4.917 4.917 0 004.588 3.417 9.867 9.867 0 01-6.1 2.106c-.397 0-.79-.023-1.175-.069a13.905 13.905 0 007.557 2.212c9.057 0 14.004-7.503 14.004-14.004 0-.213-.005-.426-.015-.637A10.025 10.025 0 0024 2.557z"/>
+                  </svg>
+              </a>
+          </div>
+      </div>
+  
+      <div class="text-center text-gray-500 text-sm mt-8">
+          &copy; 2024 Indian Culture & Heritage. All rights reserved.
+      </div>
+  </footer>
+  
+
+  
+    
+      
+    
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+    <script src="india.js"></script>
+</body>
+</html>

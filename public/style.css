@@ -1,0 +1,19 @@
+/* .map-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+} */
+
+object {
+    width: 100%;
+    height: auto;
+}
+
+path:hover {
+    fill: #ffcc00; /* Highlight color */
+    cursor: pointer;
+}
+
+
+

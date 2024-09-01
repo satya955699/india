@@ -1,0 +1,29 @@
+.logo a{
+    background-image: url(flag.png);
+    color:  black;
+    background-position: center;
+    background-size: contain;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    
+
+    /* Fallback for unsupported browsers */
+    color: black; /* Fallback color */
+}
+
+.state-1{
+    color: black;
+    background-color:  blue;
+}
+.nav-links li a{
+  
+    text-decoration: none;
+    color: #4B3832;
+}
+.move{
+    top: 10vh;
+    transition: 0.2s;
+}
+.main:hover    .move{   
+    top: -10vh; 
+}
