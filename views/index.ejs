@@ -113,30 +113,23 @@
 
             <!-- Story Slider -->
             <div id="slider" class="flex overflow-x-hidden scroll-smooth">
-                <div class="min-w-[500px] max-w-[700px] p-4">
-                    <img src="odisi.jpg" alt="Story 1" class="rounded-lg shadow-lg">
-                    <h3 class="text-lg font-semibold mt-4">Lord Padmanabha and His D...</h3>
+
+                <% story.forEach((data)=>{%>
+                     <div class="min-w-[500px] max-w-[500px] p-4">
+                    <img src="/story/1.jpg" alt="Story 1" class="rounded-lg shadow-lg">
+                    <h3 class="text-lg font-semibold mt-4"><%= data.title %></h3>
                 </div>
-                <div class="min-w-[500px] max-w-[700px] p-4">
-                    <img src="odisi.jpg" alt="Story 2" class="rounded-lg shadow-lg">
-                    <h3 class="text-lg font-semibold mt-4">The Jagannath Temple - Puri</h3>
+                    <% }) %>
+
                 </div>
-                <div class="min-w-[500px] max-w-[700px] p-4">
-                    <img src="https://via.placeholder.com/300x200" alt="Story 3" class="rounded-lg shadow-lg">
-                    <h3 class="text-lg font-semibold mt-4">Delhi Durbars</h3>
-                </div>
-                <div class="min-w-[500px] max-w-[700px] p-4">
-                    <img src="https://via.placeholder.com/300x200" alt="Story 4" class="rounded-lg shadow-lg">
-                    <h3 class="text-lg font-semibold mt-4">Simla: The Summer Capital</h3>
-                </div>
-                <div class="min-w-[500px] max-w-[700px] p-4">
-                  <img src="https://via.placeholder.com/300x200" alt="Story 4" class="rounded-lg shadow-lg">
-                  <h3 class="text-lg font-semibold mt-4">Simla: The Summer Capital</h3>
-              </div>
-              <div class="min-w-[500px] max-w-[700px] p-4">
-                <img src="https://via.placeholder.com/300x200" alt="Story 4" class="rounded-lg shadow-lg">
-                <h3 class="text-lg font-semibold mt-4">Simla: The Summer Capital</h3>
-            </div>
+                     
+                
+               
+              
+               
+                
+               
+             
             </div>
 
             <!-- Right Arrow -->

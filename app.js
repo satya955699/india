@@ -1,13 +1,29 @@
 const express = require('express');
 const path = require('path');
+const pg=require("pg")
 const app = express();
+
+
+
 
 // Serve static files
 app.use(express.static("public"))
+const db=new pg.Client({
+    user:"postgres",
+    host:"localhost",
+    database:"culture",
+    password:"satya832004",
+    port:3000
+})
+
+db.connect()
 
 // Route for each state (GET request)
-app.get("/",(req,res)=>{
-    res.render("index.ejs")
+app.get("/",async(req,res)=>{
+    const story=await db.query("SELECT * FROM  sotry")
+    
+    
+    res.render("index.ejs",{story:story.rows})
 })
 
 app.get("/tradition",(req,res)=>{
