@@ -13,11 +13,20 @@
 
                 <li><a class=" absolute" href="#home">Home</a></li>
             </div>
-            <li class="home"><a href="/tradition">Traditions</a></li>
-            <li class="home"><a href="festivals">Festivals</a></li>
+            <li class="home"><a href="/india/tradition">Traditions</a></li>
+            <li class="home"><a href="/quize">Quiz</a></li>
             <li class="home"><a href="/art-craft">Art & Craft</a></li>
             <li class="home"><a href="/music">Music & Dance</a></li>   
             <li class="home"><a href="#about">About Us</a></li>
+            <li class="relative">
+                <button id="dropdownButton"  class="   home focus:outline-none">Moree</button>
+                <ul id="dropdownMenu" class=" absolute  right-3 z-30 hidden bg-red-400 text-left mt-2 p-2 space-y-2 rounded shadow-lg">
+                    <li><a href="/festivals" class="block px-4 py-2 hover:bg-red-600 text-white">products</a></li>
+                    <li><a href="/cuisine" class="block px-4 py-2 hover:bg-red-600 text-white">3d model</a></li>
+                    <li><a href="/heritage-sites" class="block px-4 py-2 hover:bg-red-600 text-white">Heritage Sites</a></li>
+                    <li><a href="/languages" class="block px-4 py-2 hover:bg-red-600 text-white">Languages</a></li>
+                </ul>
+            </li>
         </ul>
     </div>
 
@@ -115,10 +124,18 @@
             <div id="slider" class="flex overflow-x-hidden scroll-smooth">
 
                 <% story.forEach((data)=>{%>
-                     <div class="min-w-[500px] max-w-[500px] p-4">
+                    <form action="/story/<%= data.id %>" method="get">
+                     <!-- <div class="min-w-[500px] max-w-[500px] p-4">
                     <img src="/story/1.jpg" alt="Story 1" class="rounded-lg shadow-lg">
+                    <h3 class="text-lg font-semibold mt-4"></h3>
+                    <input type="submit" placeholder="click">
+                    
+                </div> -->
+                <div class="min-w-[500px] max-w-[500px] p-4">
+                    <input style="width: 450px; " type="image" src="/story/<%=data.id %>.jpg" alt="Story 1" class="rounded-lg shadow-lg" />
                     <h3 class="text-lg font-semibold mt-4"><%= data.title %></h3>
                 </div>
+            </form>
                     <% }) %>
 
                 </div>
@@ -130,14 +147,14 @@
                 
                
              
+                
+                <!-- Right Arrow -->
+                <button id="next" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full">
+                    &rarr;
+                </button>
             </div>
-
-            <!-- Right Arrow -->
-            <button id="next" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full">
-                &rarr;
-            </button>
         </div>  
-    </div> 
+    <!-- </div>  -->
     <!-- footer  -->
     <footer class="bg-gray-900 text-white py-10">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -206,27 +223,28 @@
     
       
     
+  <script>
+    const dropdownButton = document.getElementById('dropdownButton');
+    const dropdownMenu = document.getElementById('dropdownMenu');
 
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    dropdownButton.addEventListener('click', function() {
+        // dropdownMenu.classList.toggle('hidden');
+        console.log("click")
+    });
+  
+    
+    // Optional: Close the dropdown if clicked outside
+    document.addEventListener('click', function(event) {
+        if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+            // dropdownMenu.classList.add('hidden');
+            dropdownMenu.classList.toggle("hidden")
+            console.log("ehoeo")
+        }
+    });
+</script>
 
    
     <script src="india.js"></script>
+   
 </body>
 </html>

@@ -3,9 +3,6 @@ const path = require('path');
 const pg=require("pg")
 const app = express();
 
-
-
-
 // Serve static files
 app.use(express.static("public"))
 const db=new pg.Client({
@@ -25,8 +22,15 @@ app.get("/",async(req,res)=>{
     
     res.render("index.ejs",{story:story.rows})
 })
+app.get("/story/:id",async(req,res)=>{
+ 
+    // // const cont= await db.query("SELECT * FROM  sotry WHERE id=$1",[id])
+    
+    res.render("music.ejs")
 
-app.get("/tradition",(req,res)=>{
+})
+
+app.get("/india/tradition",(req,res)=>{
     res.render("TRADITION.ejs")
     
 })
@@ -36,13 +40,11 @@ app.get("/art-craft",(req,res)=>{
 app.get("/music",(req,res)=>{
     res.render("music.ejs")
 })
-app.get('/:stateName', (req, res) => {
+app.get('/map/:stateName', (req, res) => {
     // const stateName = req.params.stateName;
     res.render("state.ejs")
    
 });
-
-
 // POST request example
 app.post('/:stateName', express.json(), (req, res) => {
     const stateName = req.params.stateName;

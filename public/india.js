@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 console.log(`State clicked: ${stateName}`);
                 
                 // Redirect to the route /state/:stateName
-                window.location.href = `/${stateName}`;
+                window.location.href = `/map/${stateName}`;
             });
         });
     });
@@ -62,22 +62,22 @@ gsap.from(".main",{
 
 
 // for product 
-document.querySelectorAll('.contact-btn').forEach(button => {
-    button.addEventListener('click', () => {
-      const sellerName = button.getAttribute('data-seller');
-      document.getElementById('sellerName').innerText = `Contacting ${sellerName}`;
-      document.getElementById('contactModal').classList.remove('hidden');
-    });
-  });
+// document.querySelectorAll('.contact-btn').forEach(button => {
+//     button.addEventListener('click', () => {
+//       const sellerName = button.getAttribute('data-seller');
+//       document.getElementById('sellerName').innerText = `Contacting ${sellerName}`;
+//       document.getElementById('contactModal').classList.remove('hidden');
+//     });
+//   });
   
-  document.getElementById('closeModal').addEventListener('click', () => {
-    document.getElementById('contactModal').classList.add('hidden');
-  });
+//   document.getElementById('closeModal').addEventListener('click', () => {
+//     document.getElementById('contactModal').classList.add('hidden');
+//   });
 
-  document.getElementById('sendMessage').addEventListener('click', () => {
-    const message = document.getElementById('message').value;
-    // Handle sending the message (e.g., via an API)
-    alert(`Message sent to the seller: ${message}`);
-    document.getElementById('contactModal').classList.add('hidden');
-  });
+//   document.getElementById('sendMessage').addEventListener('click', () => {
+//     const message = document.getElementById('message').value;
+//     // Handle sending the message (e.g., via an API)
+//     alert(`Message sent to the seller: ${message}`);
+//     document.getElementById('contactModal').classList.add('hidden');
+//   });
   
